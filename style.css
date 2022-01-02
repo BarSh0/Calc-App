@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bgc)
+}
+div.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 30rem;
+}
+div.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+div.options p.name, span.text {
+    color: var(--text-bgc);
+    font-family: 'Spartan', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+div.options span.text {
+    padding: 0.3rem;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+div.starscreen span.textstar{
+    color: var(--text-bgc);
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;   
+}
+div.options div.selection {
+    display: flex;  
+    position: relative; 
+    gap:2rem;
+}
+div.options div.selection span.nums {
+    position: absolute;
+    top:-1.5rem;
+    right: 0;
+    letter-spacing: 0.45rem;
+    color: var(--text-bgc);
+    font-family: 'Spartan', sans-serif;
+    font-size:4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+div.options div.box {
+    display: flex;
+    align-items: center;
+    width: 5rem;
+    height: 1.5rem;
+    padding: 5%;
+    border-radius: 3rem;
+    background-color:var(--box-bgc);
+}
+div.options div.dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--dot-color);
+    transition: .2s;
+}
+div.screen {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+    background-color: var(--screen-bgc);
+}
+div.starscreen {
+    display: flex;
+    align-items: center;
+    width: 40rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(29, 53, 16, 0.397);
+    border: 0.3rem solid rgb(113, 244, 96);
+    justify-content: center;
+    flex-direction: column;
+}
+div.starscreen button.star-btn{
+    width: 10rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+    background-color: var(--key-bgc);
+    flex-basis: 21%;
+    font-family: 'Spartan', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.8rem;
+    color: var(--font-color-2);
+    box-shadow: 0px 6px 0px 0px var(--key-shadow-1);
+}
+p.result {
+    width: 100%;
+    padding: 20px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    color: var(--text-bgc);
+}
+div.keypad {
+    display: flex;
+    width: 100%;
+    height: 25rem;
+    padding: 1rem;
+    background-color: var(--keypad-bgc);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;  
+}
+div.keypad button.calc-btn {
+    width: 10rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+    background-color: var(--key-bgc);
+    flex-basis: 21%;
+    font-family: 'Spartan', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.8rem;
+    color: var(--font-color-2);
+    box-shadow: 0px 6px 0px 0px var(--key-shadow-1);
+}
+.reset, .equals {
+    flex-grow: 1;
+}
+div.keypad button.calc-btn.delete, div.keypad button.calc-btn.reset {
+    font-size: 16px;
+    background-color: var(--del-res-bgc) ;
+    color: var(--del-res-color); ;
+    box-shadow: 0px 6px 0px 0px var(--key-shadow-2) ;
+}
+div.keypad button.calc-btn.equals {
+    background-color: var(--equals-bgc) ;
+    color: var(--key-bgc);
+    box-shadow: 0px 6px 0px 0px var(--key-shadow-3) ;
+}
+@media (max-width: 320px) {
+    div.keypad button.calc-btn {
+        flex-basis: 18%;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+}
